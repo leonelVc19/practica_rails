@@ -1,11 +1,9 @@
-<div id="<%= dom_id post %>">
-  <p>
-    <strong>Title:</strong>
-    <%= post.title %>
+<div id="<%= dom_id post %>" class="card p-2 back_we" >
+  <p >
+    <h5 class="bg-info-subtle p-2  rounded"> <%= post.title %> </h5>
   </p>
 
-  <p>
-    <strong>Content:</strong>
+  <p class="pl-1">
     <%= post.content %>
   </p>
 

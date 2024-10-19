@@ -13,3 +13,19 @@
  *= require_tree .
  *= require_self
  */
+
+    .text {
+        color: #000
+    }
+    .test {
+        box-shadow: 5px 7px 15px rgba(0, 0, 0, 0.3);
+    }
+
+    .back_we {
+        transition: all ease-in-out 0.3s;
+
+    }
+    .back_we :hover {
+        transform: scale(1.01);
+        transition: all ease-in-out 0.3s;
+    }

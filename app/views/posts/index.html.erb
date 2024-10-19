@@ -1,16 +1,30 @@
-<p style="color: green"><%= notice %></p>
+<p ><%= notice %></p>
 
 <% content_for :title, "Posts" %>
+<section class="d-flex justify-content-between">
+  <h1 class="display-6">Posts</h1>
+  <div>
+    <%= link_to "New post", new_post_path, class: "btn btn-primary shadow-lg p-2 mb-2 rounded" %>
+  </div>
+</section>
 
-<h1>Posts</h1>
 
 <div id="posts">
-  <% @posts.each do |post| %>
-    <%= render post %>
-    <p>
-      <%= link_to "Show this post", post %>
-    </p>
-  <% end %>
+  <div class="container">
+    <div class="row">
+      <% @posts.each do |post| %>
+        <div  class="p-2 "> 
+          <%= link_to post, class: "text-decoration-none " do %>
+            <section class="d-flex flex-column back_we"  >
+              <div class=" rounded text-decoration-none test ">
+                <%= render post %>
+              </div>
+            </section>
+          <% end %>
+        </div>
+      <% end %>
+    </div>
+  </div>
 </div>
+<hr>
 
-<%= link_to "New post", new_post_path %>
