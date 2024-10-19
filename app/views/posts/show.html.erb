@@ -7,6 +7,9 @@
 </section>
 
 <%= render @post %>
+<hr>
+<%= render "posts/comments", post: @post %>
+
 
 <div class="d-flex">
   <%= link_to "Edit this post", edit_post_path(@post), class: "btn btn-primary shadow-lg p-2 m-2 rounded" %> 

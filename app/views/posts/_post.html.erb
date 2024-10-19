@@ -2,6 +2,9 @@
   <p >
     <h5 class="bg-info-subtle p-2  rounded"> <%= post.title %> </h5>
   </p>
+  <p>
+    <strong> <%= pluralize post.comments.count, "comment" %> </strong>
+  </p>
 
   <p class="pl-1">
     <%= post.content %>
@@ -10,6 +13,7 @@
   <strong>
     Posted <%= time_tag post.created_at, "data-local": "time-ago" %>
   </strong>
+
 
 
 </div>
