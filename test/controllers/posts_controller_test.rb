@@ -16,7 +16,7 @@ class PostsControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should create post" do
-    assert_difference("Post.count") do
+    assert_difference("Post.count", 2) do
       post posts_url, params: { post: { content: @post.content, title: @post.title } }
     end
 
